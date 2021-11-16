@@ -69,8 +69,20 @@ def show_madlib():
     color = request.args.get('color')
     noun = request.args.get('noun')
     adjective = request.args.get('adjective')
+    day = request.args.get('wants_day')
+    # time = request.args.get('wants_time')
+
+    # if day checkbox is checked, day input passes
+    # into the template
+    if day:
+        day = 'Sunday'
+    
+    else:
+        day = []
+
     return render_template("madlib.html",
-        person=person, color=color, noun=noun, adjective=adjective)
+        person=person, color=color, noun=noun, adjective=adjective, 
+        day=day)
 
 if __name__ == "__main__":
     # Setting debug=True gives us error messages in the browser and also

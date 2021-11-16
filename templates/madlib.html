@@ -5,9 +5,22 @@
 </head>
 <body>
     
-    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
-When {{ person }} went to pick it up, it burst into flames in a totally
-{{ adjective }} way
+    <!-- There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab
+    {% if day %}
+     on a {{ day }}
+    {% endif %}
+    . When {{ person }} went to pick it up, it burst into flames in a totally
+    {{ adjective }} way -->
 
+    {% if day %}
+    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab
+    on a {{ day }}. When {{ person }} went to pick it up, it burst into flames in a totally
+    {{ adjective }} way
+    
+    {% else %}
+    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
+    When {{ person }} went to pick it up, it burst into flames in a totally
+    {{ adjective }} way
+    {% endif %}
 </body>
 </html>

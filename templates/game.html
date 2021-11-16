@@ -1,18 +1,40 @@
 <!doctype html>
 <html>
 <head>
-  
+
+      <link rel="stylesheet"
+            href="/static/madlibs.css">
+
 </head>
 <body>
     <form action="/madlib">
         <label>Input a person</label>
         <input type='text' name='person'>
-        <label>Input a color</label>
-        <input type='text' name='color'>
+        <!-- <label>Input a color</label> -->
+        <!-- <form name="colors"> -->
+            Choose a color:
+            <select name="color">
+              <option disabled selected value> -- select an option -- </option>
+              <option value="blue">Blue</option>
+              <option value="yellow">Yellow</option>
+              <option value="orange">Orange</option>
+              <option value="brown">Brown</option>
+              <option value="red">Red</option>
+            </select>
+          <!-- </form> -->
+        <!-- <input type='text' name='color'> -->
         <label>Input a noun</label>
         <input type='text' name='noun'>
         <label>Input an adjective</label>
         <input type='text' name='adjective'>
+        <!-- <form name="day"> -->
+            <label>Check for this madlib to be set on Sunday.</label>
+            <input type='checkbox' name='wants_day' value='Sunday'>
+        <!-- </form> -->
+        <!-- <form name="time">
+            <label>Check for this madlib to be set on an evening.</label>
+            <input type='checkbox' name='wants_time' value='Evening'>
+        </form> -->
         <input type="submit">
     </form>
 
